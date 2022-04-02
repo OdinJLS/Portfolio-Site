@@ -1,0 +1,113 @@
+body { 
+    margin: 0; 
+    background: rgb(0, 0, 0);
+    font-family:  'Work Sans', sans-serif;
+    font-weight: 300;  
+}
+
+#milkyBackground {
+    position: fixed; 
+    right: 0; 
+    bottom: 0; 
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1; 
+}
+
+.overlay {
+    color: white; 
+    font-size: 15px;
+    font-family: 'Georgia'; 
+    text-align: center;
+    background-color: black;
+    background: rgb(0, 0, 0, 0.5);
+
+    position: absolute; 
+    top: 30%; 
+    left: 20%; 
+    z-index: 1; 
+    align-self: center;
+
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+}
+
+.overlay h3, h1 {
+    opacity: 1;
+}
+
+#navbar { 
+
+    font-family: 'Georgia'; 
+
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    margin: 0 auto;  
+    opacity: 1; 
+}
+
+header {
+    background-color: black;
+    height: 75px;
+    opacity: 0.5;
+}
+
+
+header::after {
+    content: ""; 
+    display: table;
+    clear: both; 
+}
+
+.logo {
+    height: 200px;
+    width: 300px;
+}
+
+nav {
+    float: left;
+}
+
+nav ul {
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 60px;  
+    padding-top: 26px;
+
+    position: relative;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: rgb(255, 166, 0); 
+}
+
+nav a::before {
+    content: ""; 
+    display: block;
+    height: 5px; 
+    background-color: rgb(255, 166, 0); 
+
+    width: 0%; 
+    position: absolute; 
+    top: 0; 
+
+    transition: all ease-in-out 225ms; 
+}
+
+nav a:hover::before {
+    width: 100%; 
+}
